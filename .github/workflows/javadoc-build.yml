@@ -21,7 +21,7 @@ jobs:
         run: chmod +x gradlew
       - name: Build javadoc
         run: ./gradlew javadoc
-      - name: Deploy docs to ghpages
+      - name: Deploy javadocs to ghpages
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
