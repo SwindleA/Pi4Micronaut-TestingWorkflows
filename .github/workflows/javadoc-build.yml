@@ -27,6 +27,6 @@ jobs:
         run: |
           ./gradlew javadoc
       - name: where are we
-        run: ls
+        run: ls ./micronautpi4j-utils/build/docs/javadoc/
       - name: Copy Javadocs to gh-pages
         run: cp -r ./micronautpi4j-utils/build/docs/javadoc/* ./gh-pages/javadocs/
