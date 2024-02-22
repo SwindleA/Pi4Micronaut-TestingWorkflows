@@ -18,4 +18,4 @@ jobs:
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_branch: gh-pages
-          publish_dir: ./micronautpi4j-utils/build/docs/javadoc/
+          publish_dir: ./micronautpi4j-utils/build/docs/javadoc/ 
