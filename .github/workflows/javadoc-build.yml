@@ -27,6 +27,7 @@ jobs:
         run: |
           ./gradlew javadoc
       - name: Get certain branches
-        run: git branch
+        run: git checkout gh-pages
+        
       - name: Copy Javadocs to gh-pages
         run: cp -r ./micronautpi4j-utils/build/docs/javadoc/* ./gh-pages/javadocs/
