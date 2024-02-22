@@ -1,0 +1,21 @@
+name: Build Javadoc
+
+on:
+  push:
+    branches:
+      - main
+      - yamlDocs
+jobs:
+  javadoc_build:
+    runs-on: ubuntu-latest
+    name: Building the javadocs to html.
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Deploy Javadoc
+        id: javadoc_build
+        uses: MathieuSoysal/Javadoc-publisher.yml@v2.5.0
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_branch: gh-pages
+          publish_dir: ./micronautpi4j-utils/build/docs/javadoc/
