@@ -27,6 +27,5 @@ jobs:
         env:
           REPO: self
           BRANCH: gh-pages
-          FOLDER: ./micronautpi4j-utils/build/docs/asciidoc/
+          FOLDER: .
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
