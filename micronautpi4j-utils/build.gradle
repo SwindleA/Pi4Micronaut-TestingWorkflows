@@ -44,7 +44,10 @@ asciidoctor {
     baseDirFollowsSourceDir()
     resources {
         from(sourceDir) {
-            include 'img/**','../javadoc'
+            include 'img/**'
+        }
+        from("${sourceDir}/../") {
+            include 'javadoc/**'
         }
     }
 }
